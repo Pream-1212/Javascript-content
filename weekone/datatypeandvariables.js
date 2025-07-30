@@ -15,7 +15,9 @@ decimals
    uniqueness
    */
   let productName = "timber"//strings we put them in Quotes
+  console.log(typeof(productName) 
   let productCost = 3500
+  productCost = 4000
   let transportIsNeeded = true
   let tableColor
   let discount = null
@@ -23,6 +25,7 @@ decimals
   /*
   Non primitive Data type
   1.Array
+  all arrays are ordered
    is a list of items
    [numbers]
    [2,4,2.0]
@@ -47,8 +50,7 @@ let diningTableObject = {
     productName: "Dining Table",
     quantity:2,
     price:350,
-    totalCost:quantity *  price
-}
+   
 console.log(totalCost)
 let paymentType = "cash"
 const VAT = 0.05
