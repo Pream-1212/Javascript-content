@@ -15,7 +15,7 @@ decimals
    uniqueness
    */
   let productName = "timber"//strings we put them in Quotes
-  console.log(typeof(productName) 
+  console.log(typeof(productName));
   let productCost = 3500
   productCost = 4000
   let transportIsNeeded = true
@@ -50,6 +50,7 @@ let diningTableObject = {
     productName: "Dining Table",
     quantity:2,
     price:350,
+}
    
 console.log(totalCost)
 let paymentType = "cash"
