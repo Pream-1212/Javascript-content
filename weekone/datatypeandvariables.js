@@ -14,13 +14,13 @@ decimals
   6.symbol
    uniqueness
    */
-  let productName = "timber"//strings we put them in Quotes
+  let productName = "timber" //strings we put them in Quotes
   console.log(typeof(productName));
-  let productCost = 3500
-  productCost = 4000
-  let transportIsNeeded = true
-  let tableColor
-  let discount = null
+  let productCost = 3500  
+  productCost = 4000  
+  let transportIsNeeded = true 
+  let tableColor 
+  let discount = null  
   console.log(productCost*2)
   /*
   Non primitive Data type
@@ -51,8 +51,15 @@ let diningTableObject = {
     quantity:2,
     price:350,
 }
+quantity = 6
+price= 60
+totalCost = diningTableObject.quantity * price
    
 console.log(totalCost)
 let paymentType = "cash"
 const VAT = 0.05
 const PI = 3.14
+
+let name = "pream"
+console.log(name)
+// console.l
