@@ -136,41 +136,61 @@ console.log(Luke.walk())
 //display the properties of the user objects
 //call the different methods of the user objects
 
-//no.2
-let Bob={
-    email:"boo@gmail.com",
-    gender:"male",
-    username:"Bob",
-    login: function(){
-        return this.username + " has logged in"; 
-    },
-logout:function (){
-    return this.username + " has logged out";
+// //no.2
+// let Bob={
+//     email:"boo@gmail.com",
+//     gender:"male",
+//     username:"Bob",
+//     login: function(){
+//         return this.username + " has logged in"; 
+//     },
+// logout:function (){
+//     return this.username + " has logged out";
     
-},
-}
-console.log(Bob.login());
-console.log(Bob.logout());
+// },
+// }
+// console.log(Bob.login());
+// console.log(Bob.logout());
 
-let Alice={
-email:"ali@gmail.com",
-gender:"female",
-username:"Alice",
-login: function(){
-    return this.username + " has logged in";
-    },
-    logout:function(){
-        return this.username + " has logged out";
-    },
-}
-console.log(Alice.login());
-console.log(Alice.logout());
+// let Alice={
+// email:"ali@gmail.com",
+// gender:"female",
+// username:"Alice",
+// login: function(){
+//     return this.username + " has logged in";
+//     },
+//     logout:function(){
+//         return this.username + " has logged out";
+//     },
+// }
+// console.log(Alice.login());
+// console.log(Alice.logout());
 
-//no.1
-let phone={
-    color:"brown",
-    size:6.1,
-    type:"iPhone",
+// //no.1
+// let phone={
+//     color:"brown",
+//     size:6.1,
+//     type:"iPhone",
+//     takePicture: function(){
+//         return this.type + " took a picture";
+//     },
+//     playMusic: function(){
+//         return this.type + " played my sounds";
+//     },
+//     ring: function(){
+//         return this.type + " rings for 5 minutes each fall";
+//     },
+// }
+// console.log(phone.takePicture());
+// console.log(phone.playMusic());
+// console.log(phone.ring());
+
+function createPhone (color,size,type){
+    return{
+        color:color,
+        size:size,
+        type:type,
+    
     takePicture: function(){
         return this.type + " took a picture";
     },
@@ -180,7 +200,35 @@ let phone={
     ring: function(){
         return this.type + " rings for 5 minutes each fall";
     },
-}
-console.log(phone.takePicture());
-console.log(phone.playMusic());
-console.log(phone.ring());
+}}
+let preamPhone = createPhone("black","small","12GB")
+console.log(preamPhone);
+
+//no.1 Create a function to create a user object 
+//no.2 Create three users using the function
+//no.3 Logout the properties of each user object
+//no.4 Call the methods of each user object
+
+function createBed(size,type,grade,model){
+    return{
+        size:size,
+        type:type,
+        grade:grade,
+        model:model,
+        dottie :function(){
+            return(`${this.type} I don't want`);
+        },
+        modernL: function(){
+            return this.grade + " I like it";
+                    },
+                    piper: function(){
+                        return this.model + "bring that one";
+                    },
+
+    }}
+    let dottie = createBed("12m","castle","1stclass","new")
+let modernL = createBed("2ndclass","spongy","12m","current")
+let piper = createBed("3m","rolling","3rdclass","old")
+console.log(dottie);
+console.log(modernL);
+console.log(piper);
