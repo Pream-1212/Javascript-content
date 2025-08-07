@@ -215,20 +215,23 @@ function createBed(size,type,grade,model){
         type:type,
         grade:grade,
         model:model,
-        dottie :function(){
+        notWanted  :function(){
             return(`${this.type} I don't want`);
         },
-        modernL: function(){
+        wanted: function(){
             return this.grade + " I like it";
                     },
-                    piper: function(){
+                    buy: function(){
                         return this.model + "bring that one";
                     },
 
     }}
     let dottie = createBed("12m","castle","1stclass","new")
-let modernL = createBed("2ndclass","spongy","12m","current")
+let modernL = createBed("12m","spongy","2ndclass","current");
 let piper = createBed("3m","rolling","3rdclass","old")
-console.log(dottie);
-console.log(modernL);
-console.log(piper);
+console.log(dottie.notWanted());
+console.log(modernL.wanted());
+console.log(piper.buy());
+console.log("lastLine:",modernL.type,modernL.grade,modernL.size,modernL.model)
+console.log(dottie.size,dottie.type,dottie.grade,dottie.model)
+console.log(piper.size,piper.type,piper.grade,piper.model)
