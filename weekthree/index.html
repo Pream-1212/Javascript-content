@@ -1,0 +1,348 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayondo Wood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id ="heading"></h1>
+    <div id="First"></div>
+    <h2></h2>
+    <h2>heading 2</h2>
+    <h2>heading 3</h2>
+    <h2>heading 4</h2>
+    <h3 class="thirdTitle" id="third-title"></h3>
+     
+    <form class="form-inline">
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+</form>
+<p class="about"></p>
+<p class="about"></p>
+    <script src = "loops.js"></script>
+    <script src = "dom1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Application From Team Calcultors</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #6d6092;
+        text-align: center;
+        padding: 20px;
+    }
+    .quiz-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .question {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .options button {
+        display: block;
+        background: #ddd;
+        border: none;
+        padding: 10px;
+        margin: 5px 0;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 4px;
+    }
+    .options button:hover {
+        background: #ccc;
+    }
+    .result {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .timer {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<h1>Quiz Application</h1>
+<div class="quiz-container">
+    <div class="timer">Time Left:73 <span id="time">73</span>s</div>
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <div class="result" id="result"></div>
+    <button id="nextBtn" style="display:none;">Next Question</button>
+    <button id="retryBtn" style="display:none;">Retry Quiz</button>
+</div>
+
+<script>
+const quizData = [
+    {
+        question: "What is the capital of France?",
+        options: ["Paris", "London", "Berlin", "Rome"],
+        answer: "Paris"
+    },
+    {
+        question: "Which language runs in a web browser?",
+        options: ["Python", "C++", "JavaScript", "Java"],
+        answer: "JavaScript"
+    },
+    {
+        question: "2 + 2 = ?",
+        options: ["3", "4", "5", "6"],
+        answer: "4"
+    },
+    {
+        question: "What is the largest planet in our solar system?",
+        options: ["Earth", "Mars", "Jupiter", "Saturn"],
+        answer: "Jupiter"
+    },
+    {
+        question: "What is the boiling point of water?",
+        options: ["90°C", "100°C", "80°C", "120°C"],
+        answer: "100°C"
+    },
+    {
+        question: "Who wrote 'To Kill a Mockingbird'?",
+        options: ["Harper Lee", "Mark Twain", "Ernest Hemingway", "F. Scott Fitzgerald"],
+        answer: "Harper Lee"
+    },
+    {
+        question: "What is the chemical symbol for gold?",
+        options: ["Au", "Ag", "Pb", "Fe"],
+        answer: "Au"
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Mars", "Venus", "Jupiter"],
+        answer: "Mars"
+    },
+    {
+        question: "What is the hardest natural substance on Earth?",
+        options: ["Gold", "Iron", "Diamond", "Quartz"],
+        answer: "Diamond"
+    },
+    {
+        question: "What is the main ingredient in guacamole?",
+        options: ["Tomato", "Avocado", "Pepper", "Onion"],
+        answer: "Avocado"
+    },
+    {
+        question: "What is the largest mammal?",
+        options: ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+        answer: "Blue Whale"
+    },
+    {
+        question: "What is the capital of Japan?",
+        options: ["Seoul", "Tokyo", "Beijing", "Bangkok"],
+        answer: "Tokyo"
+    },
+    {
+        question: "What is the smallest country in the world?",
+        options: ["Monaco", "Vatican City", "San Marino", "Liechtenstein"],
+        answer: "Vatican City"
+    },
+    {
+        question: "What is the main language spoken in Brazil?",
+        options: ["Spanish", "Portuguese", "English", "French"],
+        answer: "Portuguese"
+    },
+    {
+        question: "What is the largest ocean on Earth?",
+        options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        answer: "Pacific Ocean"
+    },
+    {
+        question: "Who painted the Mona Lisa?",
+        options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        answer: "Leonardo da Vinci"
+    },
+    {
+        question: "What is the currency of the United States?",
+        options: ["Dollar", "Euro", "Pound", "Yen"],
+        answer: "Dollar"
+    },
+    {
+        question: "What is the largest desert in the world?",
+        options: ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Kalahari Desert"],
+        answer: "Sahara Desert"
+    },
+    {
+        question: "What is the main ingredient in sushi?",
+        options: ["Rice", "Noodles", "Bread", "Potatoes"],
+        answer: "Rice"
+    },
+    {
+        question: "What is the chemical symbol for water?",
+        options: ["H2O", "CO2", "O2", "NaCl"],
+        answer: "H2O"
+    },
+    {
+        question: "Who discovered penicillin?",
+        options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Albert Einstein"],
+        answer: "Alexander Fleming"
+    },
+    {
+        question: "What is the largest continent by area?",
+        options: ["Africa", "Asia", "North America", "South America"],
+        answer: "Asia"
+    },
+    {
+        question: "What is the main gas found in the air we breathe?",
+        options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        answer: "Nitrogen"
+    },
+    {
+        question: "What is the capital of Italy?",
+        options: ["Rome", "Venice", "Florence", "Milan"],
+        answer: "Rome"
+    },
+    {
+        question: "What is the largest organ in the human body?",
+        options: ["Heart", "Liver", "Skin", "Lungs"],
+        answer: "Skin"
+    },
+    {
+        question: "What is the main ingredient in hummus?",
+        options: ["Chickpeas", "Lentils", "Beans", "Peas"],
+        answer: "Chickpeas"
+    },
+    {
+        question: "What is the speed of light?",
+        options: ["300,000 km/s", "150,000 km/s", "450,000 km/s", "600,000 km/s"],
+        answer: "300,000 km/s"
+    },
+    {
+        question: "What is the largest planet in our solar system?",
+        options: ["Earth", "Mars", "Jupiter", "Saturn"],
+        answer: "Jupiter"
+    },
+    {
+        question: "What is the main ingredient in a Caesar salad?",
+        options: ["Lettuce", "Tomato", "Cucumber", "Croutons"],
+        answer: "Lettuce"
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timeLeft = 73;
+let quizHistory = [];
+
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const resultEl = document.getElementById("result");
+const nextBtn = document.getElementById("nextBtn");
+const retryBtn = document.getElementById("retryBtn");
+const timeEl = document.getElementById("time");
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    quizHistory = [];
+    resultEl.textContent = "";
+    retryBtn.style.display = "none";
+    showQuestion();
+}
+
+function showQuestion() {
+    resetState();
+    startTimer();
+    let currentQuestion = quizData[currentQuestionIndex];
+    questionEl.textContent = currentQuestion.question;
+    currentQuestion.options.forEach(option => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => selectAnswer(option, currentQuestion.answer);
+        optionsEl.appendChild(button);
+    });
+}
+
+function resetState() {
+    optionsEl.innerHTML = "";
+    nextBtn.style.display = "none";
+    clearInterval(timer);
+    timeLeft = 10;
+    timeEl.textContent = timeLeft;
+}
+
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+        timeEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            lockOptions();
+        }
+    }, 1000);
+}
+
+function selectAnswer(selected, correct) {
+    clearInterval(timer);
+    const buttons = optionsEl.querySelectorAll("button");
+    buttons.forEach(btn => {
+        btn.disabled = true;
+        if (btn.textContent === correct) btn.style.background = "lightgreen";
+        if (btn.textContent === selected && selected !== correct) btn.style.background = "salmon";
+    });
+    if (selected === correct) score++;
+    quizHistory.push({ question: quizData[currentQuestionIndex].question, selected, correct });
+    nextBtn.style.display = "inline-block";
+}
+
+function lockOptions() {
+    const buttons = optionsEl.querySelectorAll("button");
+    buttons.forEach(btn => btn.disabled = true);
+    nextBtn.style.display = "inline-block";
+}
+
+nextBtn.onclick = () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+        showQuestion();
+    } else {
+        showResults();
+    }
+};
+
+function showResults() {
+    clearInterval(timer);
+    questionEl.textContent = `You scored ${score} out of ${quizData.length}`;
+    optionsEl.innerHTML = "";
+    resultEl.innerHTML = "<strong>Quiz History:</strong><br>" + quizHistory.map(h => 
+        `${h.question}<br> Your answer: ${h.selected} | Correct: ${h.correct}<br><br>`
+    ).join("");
+    nextBtn.style.display = "none";
+    retryBtn.style.display = "inline-block";
+}
+
+retryBtn.onclick = startQuiz;
+
+startQuiz();
+</script>
+
+</body>
+</html>
+
+    <script src="dom2.js"></script>
+
+</body>
+</html>
