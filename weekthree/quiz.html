@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Application</title>
+<link href="quiz.css" rel="stylesheet">
+       
+</head>
+<body>
+<div class="container" id="landing-page">
+    <h1>Welcome to the Quiz Application</h1>
+    <p>Test your knowledge with our quiz!</p>
+    <button id="startBtn">Start Quiz</button>
+   </div>
+   
+   
+<h1>Quiz Application</h1>
+<div class="quiz-container">
+    <div class="timer">Time Left: <span id="time">10</span>s</div>
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <div class="result" id="result"></div>
+    <button id="nextBtn" style="display:none;">Next Question</button>
+    <button id="retryBtn" style="display:none;">Retry Quiz</button>
+</div>
+<script src="quiz.js"></script>   
+</body>
+</html>
