@@ -22,7 +22,7 @@ let personobject = {
     firstname:"Pream",
 isMarried:true,
  lastname:"Queen",
- dob:03/05/2005,
+ dob:"03/05/2005",
  country:"Uganda"
  
 }
@@ -34,7 +34,7 @@ console.log(personobject.firstname);
 console.log(skilllist);
 console.log(skilllist[1]);
 
-let objecttable{
+let objecttable={
         name:"dining table",
     price:500000,
     quantity:3,
