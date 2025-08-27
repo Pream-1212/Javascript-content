@@ -1,4 +1,4 @@
-//let userName = {
+let userName = {
 firstName: "Hana",
 secondName: "Debay"
 };

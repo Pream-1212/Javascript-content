@@ -1,5 +1,6 @@
 const form = document.getElementById("userForm");
 
+
 const tableBody = document.querySelector("#userTable tbody"); 
 
 form.addEventListener("submit", submitForm);

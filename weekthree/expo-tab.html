@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Export Table To PDF and Excel</title>
+    <link rel="style sheet" href="table.css" />
+  </head>
+  <body>
+    <h2>Furniture Company - Suppliers</h2>
+
+    <table id="suppliersTable" border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Supplier ID</th>
+          <th>Supplier Name</th>
+          <th>Contact Person</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Product Categories</th>
+          <th>Location</th>
+          <th>Status</th>
+          <th>Last Order Date</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SUP001</td>
+          <td>WoodCraft Ltd.</td>
+          <td>Emily Saunders</td>
+          <td>emily@woodcraft.com</td>
+          <td>(555) 123-4567</td>
+          <td>Wooden Furniture</td>
+          <td>Oregon, USA</td>
+          <td>Active</td>
+          <td>2025-08-01</td>
+          <td>Reliable, long-term partner</td>
+        </tr>
+        <tr>
+          <td>SUP002</td>
+          <td>SteelForm Inc.</td>
+          <td>Raj Patel</td>
+          <td>raj@steelform.in</td>
+          <td>+91-9876543210</td>
+          <td>Metal Frames</td>
+          <td>Pune, India</td>
+          <td class="status-Active">Active</td>
+          <td>2025-07-28</td>
+          <td>Fast delivery, high quality</td>
+        </tr>
+        <tr>
+          <td>SUP003</td>
+          <td>Comfort Upholstery</td>
+          <td>Lisa Thompson</td>
+          <td>lisa@comfortup.com</td>
+          <td>(555) 234-7890</td>
+          <td>Cushions, Fabrics</td>
+          <td>North Carolina</td>
+          <td class="status-Inactive">Inactive</td>
+          <td>2025-03-15</td>
+          <td>On hold due to pricing</td>
+        </tr>
+        <tr>
+          <td>SUP004</td>
+          <td>EcoBoard Supplies</td>
+          <td>Tom Mugerwa</td>
+          <td>tom@ecoboard.com</td>
+          <td>(555) 345-6789</td>
+          <td>Sustainable Wood Panels</td>
+          <td>Vancouver, Canada</td>
+          <td class="status-Active">Active</td>
+          <td>2025-08-10</td>
+          <td>Supplies eco-friendly goods</td>
+        </tr>
+        <tr>
+          <td>SUP005</td>
+          <td>Trendy Legs Co.</td>
+          <td>mayanja Deogracious</td>
+          <td>ana@trendylegs.mx</td>
+          <td>+52-55-67890123</td>
+          <td>Table & Chair Legs</td>
+          <td>Mexico City, MX</td>
+          <td class="status-Pending">Pending</td>
+          <td>N/A</td>
+          <td>New supplier, under review</td>
+        </tr>
+
+        <!-- Add other rows here -->
+      </tbody>
+    </table>
+
+    <br />
+
+    <button id="downloadPdf">Download PDF</button>
+    <button id="downloadExcel">Download Excel</button>
+    <script src="table.js"></script>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </body>
+</html>
