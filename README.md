@@ -19,6 +19,8 @@ functions.js → Creating and calling functions.
 
 index.html / index.js → Starter files for running JS in browser.
 
+
+
 ex.js →EXAMPLE EXERCISES.
 
 Week 2 – Core JavaScript Practice
@@ -28,6 +30,8 @@ variables.js → Revisiting variable scope.
 functions.js → More on functions and returns.
 
 math.js → Arithmetic and mathematical operations.
+
+
 
  Week 3 – DOM, EVENTS AND STORAGE
 
@@ -55,6 +59,8 @@ error.html / error-handling.css → Error display styles.
 
 table.js → Dynamic table rendering.
 
+
+
  Week 4 – ADVANCED JAVASCRIPT CONCEPTS
 
 const.js → Constants in JS.
@@ -66,6 +72,8 @@ encapsulation.js → Encapsulation in OOP.
 oops.js / oops.html → Object-Oriented Programming.
 
 asynchronous.js → Callbacks, Promises, Async/Await.
+
+
 
  HOW TO USE 
 
@@ -90,6 +98,8 @@ Open the corresponding .html file in your browser.
 
 Example: week3/forms-and-tables.html.
 
+
+
  LEARNING GOALS
 
 Understand basic to advanced JavaScript concepts.
@@ -100,6 +110,8 @@ Explore modular JavaScript with ES6 import/export.
 
 Strengthen knowledge of OOP and asynchronous programming.
 
+
+
 CONTRIBUTION
 
 Fork the repo.
@@ -108,9 +120,12 @@ Add improvements (new examples, bug fixes, extra notes).
 
 Create a pull request.
 
+
+
  LICENSE
 
 This project is licensed under the MIT License – free to use and share.
+
 
 CONTACT .
 Feel free to reach outon my email (preamqueentwesige@gmail.com) .
