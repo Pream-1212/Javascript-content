@@ -1,9 +1,9 @@
-# Javascript-content
+# JAVASCRIPT-CONTENT
 JavaScript Content Repository
 
 This repository contains JavaScript learning materials organized by weeks. Each week covers new concepts with hands-on examples in .js and .html files. It is intended for practice, revision, and building a strong foundation in JavaScript programming.
 
-📂 Project Structure
+📂 PROJECT STRUCTURE
 Javascript-content/
 │
 ├── week1/
@@ -56,8 +56,8 @@ Javascript-content/
 │
 └── README.md
 
- Topics Covered
- Week 1 – JavaScript Fundamentals
+TOPICS COVERED
+ Week 1 –JAVASCRIPT FUNDERMENTALS
 
 dataTypes.js → Primitive and reference data types.
 
@@ -71,7 +71,7 @@ functions.js → Creating and calling functions.
 
 index.html / index.js → Starter files for running JS in browser.
 
-ex.js → Example exercises.
+ex.js →EXAMPLE EXERCISES.
 
 Week 2 – Core JavaScript Practice
 
@@ -81,7 +81,7 @@ functions.js → More on functions and returns.
 
 math.js → Arithmetic and mathematical operations.
 
- Week 3 – DOM, Events & Storage
+ Week 3 – DOM, EVENTS AND STORAGE
 
 dom1.js → DOM manipulation.
 
@@ -107,7 +107,7 @@ error.html / error-handling.css → Error display styles.
 
 table.js → Dynamic table rendering.
 
- Week 4 – Advanced JavaScript Concepts
+ Week 4 – ADVANCED JAVASCRIPT CONCEPTS
 
 const.js → Constants in JS.
 
@@ -119,7 +119,7 @@ oops.js / oops.html → Object-Oriented Programming.
 
 asynchronous.js → Callbacks, Promises, Async/Await.
 
- How to Use
+ HOW TO USE 
 
 Clone the repository:
 
@@ -142,7 +142,7 @@ Open the corresponding .html file in your browser.
 
 Example: week3/forms-and-tables.html.
 
- Learning Goals
+ LEARNING GOALS
 
 Understand basic to advanced JavaScript concepts.
 
@@ -152,7 +152,7 @@ Explore modular JavaScript with ES6 import/export.
 
 Strengthen knowledge of OOP and asynchronous programming.
 
-Contribution
+CONTRIBUTION
 
 Fork the repo.
 
@@ -160,6 +160,9 @@ Add improvements (new examples, bug fixes, extra notes).
 
 Create a pull request.
 
- License
+ LICENSE
 
 This project is licensed under the MIT License – free to use and share.
+
+CONTACT .
+Feel free to reach outon my email (preamqueentwesige@gmail.com) .
