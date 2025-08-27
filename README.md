@@ -3,58 +3,6 @@ JavaScript Content Repository
 
 This repository contains JavaScript learning materials organized by weeks. Each week covers new concepts with hands-on examples in .js and .html files. It is intended for practice, revision, and building a strong foundation in JavaScript programming.
 
-📂 PROJECT STRUCTURE
-Javascript-content/
-│
-├── week1/
-│   ├── dataTypes.js
-│   ├── datatypeandvariables.js
-│   ├── ex.js
-│   ├── functions.js
-│   ├── index.html
-│   ├── index.js
-│   ├── mathsObjects.js
-│   ├── variables.js
-│
-├── week2/
-│   ├── variables.js
-│   ├── functions.js
-│   ├── math.js
-│
-├── week3/
-│   ├── Chart.html
-│   ├── Chart.js
-│   ├── LocalStorage&sessionStorage.html
-│   ├── LocalStorage&sessionStorage.js
-│   ├── dom1.js
-│   ├── error-handling.css
-│   ├── error.html
-│   ├── events.html
-│   ├── events.js
-│   ├── expo-tab.html
-│   ├── formErrorHandling.css
-│   ├── formErrorHandling.js
-│   ├── forms-and-tables.html
-│   ├── forms-and-tables.js
-│   ├── index.html
-│   ├── index1.html
-│   ├── loops.js
-│   ├── pag.html
-│   ├── pagination.js
-│   ├── quiz.css
-│   ├── quiz.js
-│   ├── table.js
-│   ├── ternaryOperator.js
-│
-├── week4/
-│   ├── const.js
-│   ├── export.js
-│   ├── encapsulation.js
-│   ├── oops.html
-│   ├── oops.js
-│   ├── asynchronous.js
-│
-└── README.md
 
 TOPICS COVERED
  Week 1 –JAVASCRIPT FUNDERMENTALS
